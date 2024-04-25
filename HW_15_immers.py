@@ -29,7 +29,7 @@ def directory_traversal(dir_path: str):
     for root, dirs, files in os.walk(dir_path):
         '''Полный проход по всем папкам в ветке директории'''
         cur_root_dir = root.split("\\")[-1]
-        # print(root_dir)
+
         for name_dir in dirs:
             '''Проходимся по всем папкам в текущей директроии и логируем в файл с расширением (.dir)'''
             content_file = Content_dir(name_dir, "dir", cur_root_dir)
@@ -43,7 +43,7 @@ def directory_traversal(dir_path: str):
             logger.info(f"Имя файла - {content_file[0]}, Расширение - {content_file[1]}, Корневая папка - {content_file[2]}")
 
 
-# directory_traversal('D:\Новая папка\log_01')
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
